@@ -1,6 +1,4 @@
 #!/bin/bash
-#logfile=$$.log
-#exec > $logfile 2>&1
 #
 # Licensed GPLv3
 #
@@ -11,7 +9,7 @@
 #
 # PORTAL of BONE configuration overview
 #  
-# ((Internet))---[eth0]<[BBB]>[usb0]----((Host))
+# ((Host))----[usb0]<[BBB]>[eth0]---((Internet))
 #   usb0: 192.168.7.2
 #        * anything from here can only reach 9040 (Tor proxy) or,
 #        * the transparent Tor proxy 
@@ -88,6 +86,7 @@ apt-get -y install deb.torproject.org-keyring && apt-get -y install tor
 #
 # Let's puke out the config for tor and create the log file
 cat >> /etc/tor/torrc << __TORRC__
+AllowUnverifiedNodes middle,rendezvous
 Log notice file /var/log/tor/notices.log
 VirtualAddrNetwork 10.192.0.0/10
 AutomapHostsSuffixes .onion,.exit
@@ -138,6 +137,11 @@ ln -s /usr/share/zoneinfo/UTC /etc/localtime
 #
 # set hostname 
 echo "B0N3D" > /etc/hostname
+#
+# move the messy log file in to your new home dir for review
+# this is something of a disaster at the moment, sorry
+chown toruser:toruser /tmp/outfile
+mv /tmp/outfile /home/toruser/BBB-TOR-install.$$
 #
 # reboot to start using the BBB as a tor middler
 #shutdown -r now
