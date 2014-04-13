@@ -131,10 +131,10 @@ ln -s /usr/share/zoneinfo/UTC /etc/localtime
 # set hostname 
 echo "B0N3D" > /etc/hostname
 #
-# move the messy log file in to your new home dir for review
+# move the messy log file in to your home dir for review
 # this is something of a disaster at the moment, sorry
-chown toruser:toruser /tmp/outfile
-mv /tmp/outfile /home/toruser/BBB-TOR-install.$$
+chown debian:debian /tmp/outfile
+mv /tmp/outfile /home/debian/BBB-TOR-install.$$
 #
 # reboot to start using the BBB as a tor middler
 shutdown -r now
