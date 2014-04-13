@@ -86,7 +86,6 @@ apt-get -y install deb.torproject.org-keyring && apt-get -y install tor
 #
 # Let's puke out the config for tor and create the log file
 cat >> /etc/tor/torrc << __TORRC__
-AllowUnverifiedNodes middle,rendezvous
 Log notice file /var/log/tor/notices.log
 VirtualAddrNetwork 10.192.0.0/10
 AutomapHostsSuffixes .onion,.exit
