@@ -26,10 +26,12 @@ This script is meant to be run on a vanila install of Debian from Robert C Nelso
   * I suggest a wired connection in eth0
 4. Become root
   * Quick and dirty `sudo bash`
-5. Grab the build.sh file
+5. Move in to /tmp (don't run the script out of the dir we're going to destroy)
+  * `cd /tmp`
+6. Grab the build.sh file
   * Easiest is probably `git clone https://github.com/crvallance/BBB-Tor.git`
-6. Make executable and run
+7. Make executable and run
   * `cd BBB-Tor`
   * `chmod +x ./build.sh`
   * `./build.sh`
-7. You should see stuff in stdout as well as in /var/log/syslog
+8. You should see stuff in stdout as well as in /var/log/syslog
