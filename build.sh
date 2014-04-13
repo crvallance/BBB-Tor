@@ -53,14 +53,8 @@ apt-get -y update && apt-get -y upgrade
 # install ntp
 apt-get -y install ntp
 #
-# remove default debian user and add new one
-deluser --remove-home debian
-adduser --disabled-password --gecos "" toruser
-usermod -a -G admin toruser
-# set password for toruser to "dummypass"
-usermod -p '$6$m6GEKlNk$XndSWbqB299kqSFFGnPz6FxN8uawPKowMPBYdqYXjMtUxlUWJglrTX.MO3rQ6Z38sow606ZaNIhwao.SaYSnT1' toruser
 # force user to change password upon login
-chage -d 0 toruser
+chage -d 0 debian
 #
 #remove and regen your ssh keys (can't be too careful these days)
 sh -c "/bin/rm /etc/ssh/ssh_host_*"
