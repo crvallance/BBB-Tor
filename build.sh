@@ -144,5 +144,5 @@ chown toruser:toruser /tmp/outfile
 mv /tmp/outfile /home/toruser/BBB-TOR-install.$$
 #
 # reboot to start using the BBB as a tor middler
-#shutdown -r now
+shutdown -r now
 
