@@ -33,4 +33,4 @@ This script is meant to be run on a vanila install of Debian from Robert C Nelso
   * `chmod +x ./build.sh`
   * `./build.sh`
 7. You should see stuff in stdout as well as in /var/log/syslog
-8. Check out check.torproject.org to see if things are working!
+8. Check out https://check.torproject.org to see if things are working!
