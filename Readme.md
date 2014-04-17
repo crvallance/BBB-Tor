@@ -2,14 +2,15 @@ BBB-Tor
 ==========
 
 Beablebone Black Tor Middle - BeagleBone Black based onion router.
+___
 ((Host))----[usb0]<[BBB]>[eth0]---((Internet))
+___
 
-Development and Design Guide
-=============================
+First cobbled attempt: Colin Vallance <crvallance@keybase.io>
 
-First cobbled attempt: Colin Vallance <colin@cvallance.net>
-
-Major Thanks: Inspiration from the gruq and his PORTAL / PORTALofPi projects (https://github.com/grugq/PORTALofPi)
+Major Thanks: 
+==========
+Inspiration from the gruq and his PORTAL / PORTALofPi projects (https://github.com/grugq/PORTALofPi)
 
 Robert C Nelson (http://www.rcn-ee.com/) for the prebuilt images for the BBB.
 
@@ -20,9 +21,9 @@ Jeff Jarmoc (https://twitter.com/jjarmoc) for the all around mentoring and the p
 
 Basic Steps
 =====
-This script is meant to be run on a vanila install of Debian from Robert C Nelson.  I do not take any responsibility for the absolute security while using this implementation.  As I am no expert, there may be leaks and/or misconfigurations.  If you see anything please feel free to let me know and/or fork / patch / submit a pull request.
+This script is meant to be run on a vanila install of Debian from Robert C Nelson.  I do not take any responsibility for absolute security while using this implementation.  As I am no expert, there may be leaks and/or misconfigurations.  If you see anything please feel free to let me know and/or fork / patch / submit a pull request.
 
-1. Take a look at http://elinux.org/BeagleBoardDebian#BeagleBone.2FBeagleBone_Black for prebuilt images
+1. Take a look at http://elinux.org/BeagleBoardDebian#BeagleBone.2FBeagleBone_Black for prebuilt images and how to flash or build them.
   * Page is updated normally but root for all wheezy images is https://rcn-ee.net/deb/microsd/wheezy/
 2. Flash an SD card
   * Use dd or win32diskimager (https://wiki.ubuntu.com/Win32DiskImager)
