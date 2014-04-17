@@ -7,15 +7,20 @@ Beablebone Black Tor Middle - BeagleBone Black based onion router.
 Development and Design Guide
 =============================
 
-By: Colin Vallance <colin@cvallance.net>
+First cobbled attempt: Colin Vallance <colin@cvallance.net>
 
-Thanks: Major inspiration from the gruq and his PORTAL / PORTALofPi projects (https://github.com/grugq/PORTALofPi)
+Major Thanks: Inspiration from the gruq and his PORTAL / PORTALofPi projects (https://github.com/grugq/PORTALofPi)
+
 Robert C Nelson (http://www.rcn-ee.com/) for the prebuilt images for the BBB.
+
+Adafruit's learning tutorial on TOR (https://learn.adafruit.com/onion-pi/install-tor)
+
+Jeff Jarmoc (https://twitter.com/jjarmoc) for the all around mentoring and the push to get this working.
 
 
 Basic Steps
 =====
-This script is meant to be run on a vanila install of Debian from Robert C Nelson.
+This script is meant to be run on a vanila install of Debian from Robert C Nelson.  I do not take any responsibility for the absolute security while using this implementation.  As I am no expert, there may be leaks and/or misconfigurations.  If you see anything please feel free to let me know and/or fork / patch / submit a pull request.
 
 1. Take a look at http://elinux.org/BeagleBoardDebian#BeagleBone.2FBeagleBone_Black for prebuilt images
   * Page is updated normally but root for all wheezy images is https://rcn-ee.net/deb/microsd/wheezy/
